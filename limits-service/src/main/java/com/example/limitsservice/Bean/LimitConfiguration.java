@@ -1,25 +1,15 @@
 package com.example.limitsservice.Bean;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class LimitConfiguration {
-	private int maximum;
 	private int minimum;
-
-	protected LimitConfiguration() {
-
-	}
-
-	public LimitConfiguration(int maximum, int minimum) {
-		super();
-		this.maximum = maximum;
-		this.minimum = minimum;
-	}
-
-	public int getMaximum() {
-		return maximum;
-	}
-
-	public int getMinimum() {
-		return minimum;
-	}
-
+	private int maximum;
+	
 }
